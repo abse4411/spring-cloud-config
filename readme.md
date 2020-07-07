@@ -33,3 +33,10 @@
 - 或者任意一个config-client：
   1. config-client: `POST` http://localhost:8081/actuator/bus-refresh
   2. config-client1: `POST` http://localhost:8080/actuator/bus-refresh
+### 获取配置
+
+- 获取config-client的配置文件中`hello`项的值
+  1. config-client :`GET` http://localhost:8081/hello 
+  2.  config-client1: `GET` http://localhost:8080/hello
+- 获取完整的配置文件：
+  config-server:`GET`  http://localhost:8881/master/hztech-prod.yml
