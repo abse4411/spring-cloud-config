@@ -1,0 +1,36 @@
+server:
+  port: 8881
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/xuefeng4411/spring-cloud-config.git
+          search-paths: config-hztech
+          default-label: master
+          username:
+          password:
+# rabbitmq配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+encrypt:
+  key: boss-soft
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#        native:
+#          search-locations: classpath:config/
+#  profiles:
+#    active: native
