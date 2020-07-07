@@ -29,7 +29,7 @@
 
 ### 刷新配置
 
-- 针对config-server: `POST` http://localhost:8081/actuator/bus-refresh
+- 针对config-server: `POST` http://localhost:8881/actuator/bus-refresh
 - 或者任意一个config-client：
   1. config-client: `POST` http://localhost:8081/actuator/bus-refresh
   2. config-client1: `POST` http://localhost:8080/actuator/bus-refresh
